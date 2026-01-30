@@ -22,7 +22,7 @@
         android:background="@color/gold"
         app:itemIconTint="@color/bottom_bar_color_selector"
         app:itemTextColor="@color/bottom_bar_color_selector"
-
+        app:itemActiveIndicatorStyle="@android:color/black"
         />
 
 

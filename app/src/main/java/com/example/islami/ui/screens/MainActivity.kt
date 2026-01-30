@@ -28,13 +28,8 @@ class MainActivity : AppCompatActivity() {
           when(item.itemId){
               R.id.QuranTab -> FragmentsController(QuranFragment())
               R.id.Hadehtab -> FragmentsController(HadethFragment())
-              R.id.SebhaTab -> {
-                  Toast.makeText(this,"Under Development", Toast.LENGTH_SHORT).show();
-                  return@setOnItemSelectedListener false
-              }
-              R.id.RadioTab ->{
-                  Toast.makeText(this,"Task", Toast.LENGTH_SHORT).show();
-                  return@setOnItemSelectedListener false}
+              R.id.SebhaTab -> FragmentsController(SebhaFragment())
+              R.id.RadioTab -> FragmentsController(RadioFragment())
           }
 
 
@@ -48,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.FragmentsContainer,fragment)
+            .addToBackStack("")
             .commit()
 
     }
