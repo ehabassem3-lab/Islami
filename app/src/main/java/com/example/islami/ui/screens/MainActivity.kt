@@ -1,20 +1,14 @@
 package com.example.islami.ui.screens
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.islami.R
 import com.example.islami.databinding.ActivityMainBinding
-import com.example.islami.ui.screens.fragments.HadethFragment
-import com.example.islami.ui.screens.fragments.QuranFragment
-import com.example.islami.ui.screens.fragments.RadioFragment
-import com.example.islami.ui.screens.fragments.SebhaFragment
+import com.example.islami.ui.screens.fragments.hadeth.HadethFragment
+import com.example.islami.ui.screens.fragments.quran.QuranFragment
+import com.example.islami.ui.screens.fragments.radio.RadioFragment
+import com.example.islami.ui.screens.fragments.sebha.SebhaFragment
 
 
 class MainActivity : AppCompatActivity() {
