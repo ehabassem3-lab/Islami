@@ -31,17 +31,14 @@ class QuranFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         recyclerView = view.findViewById(R.id.Suras_RecyclerView)
-        adapter = QuranAdapter(QuranDM.quranList)
-        recyclerView.adapter = adapter
-        adapter.selectedSurah = object : SelectedSurah{
-            override fun surahClick(
-                position: Int,
-                quranDM: QuranDM
-            ) {
-                val intent = Intent(requireContext() , SelectedSurah_Activity::class.java)
-            }
+        adapter = QuranAdapter(QuranDM.quranList,{ surah->
+            val intent = Intent(context, SelectedSurah_Activity::class.java)
+            intent.putExtra(SelectedSurah_Activity.SURAH_KEY,surah)
+            startActivity(intent)
 
-        }
+        })
+        recyclerView.adapter = adapter
+
     }
 
 

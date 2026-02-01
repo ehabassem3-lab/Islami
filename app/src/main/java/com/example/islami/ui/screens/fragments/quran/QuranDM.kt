@@ -1,6 +1,12 @@
 package com.example.islami.ui.screens.fragments.quran
 
-data class QuranDM(var surahNameAr : String ,var surahNameEn : String , var surahNumber : Int , var surahVerseNumber : Int )
+import java.io.Serializable
+
+data class QuranDM(
+    var surahNameAr : String
+    ,var surahNameEn : String ,
+    var surahNumber : Int ,
+    var surahVerseNumber : Int ) : Serializable
 {
     companion object{
         val quranList : ArrayList<QuranDM> = arrayListOf(

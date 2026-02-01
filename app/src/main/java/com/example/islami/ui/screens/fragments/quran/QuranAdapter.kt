@@ -7,8 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.islami.R
 
-class QuranAdapter
-    (var QuranList : ArrayList<QuranDM>)
+class QuranAdapter(var QuranList : ArrayList<QuranDM>,var onClick : (QuranDM) -> Unit)
     :
 RecyclerView.Adapter<QuranAdapter.ViewHolder>()
 {
@@ -32,10 +31,9 @@ RecyclerView.Adapter<QuranAdapter.ViewHolder>()
         holder.surahNameAr.text = QuranList.surahNameAr
         holder.surahNumber.text = QuranList.surahNumber.toString()
         holder.surahVerse.text = QuranList.surahVerseNumber.toString()+"   Verses  "
-           holder.itemView.setOnClickListener { view->
-               selectedSurah.surahClick(position,QuranList)
-           }
-
+         holder.itemView.setOnClickListener {
+             onClick(QuranList)
+         }
     }
 
 
