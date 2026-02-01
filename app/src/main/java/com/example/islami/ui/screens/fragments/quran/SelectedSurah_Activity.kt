@@ -21,6 +21,7 @@ class SelectedSurah_Activity : AppCompatActivity(){
          binding  = SelectedSurahBinding.inflate(layoutInflater)
         setContentView(binding.root)
         surahGetter()
+        surahDetails()
 
 
         binding.backArrow.setOnClickListener { view ->
@@ -43,7 +44,18 @@ class SelectedSurah_Activity : AppCompatActivity(){
                 )
 
         binding.surahNameAr.text = surah.surahNameAr
+
         binding.surahNameEn.text = surah.surahNameEn
+    }
+
+    fun surahDetails(){
+        val fileName = "quran/${surah.surahNumber}.txt"
+        val surahName = assets.open(fileName)
+      val lines =  surahName.reader().readLines()
+        binding.SlectedSurauh.text = lines.toString()
+
+
+
     }
 
 }

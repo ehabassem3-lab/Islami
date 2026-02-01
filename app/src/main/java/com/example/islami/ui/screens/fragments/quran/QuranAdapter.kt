@@ -12,7 +12,6 @@ class QuranAdapter(var QuranList : ArrayList<QuranDM>,var onClick : (QuranDM) ->
 RecyclerView.Adapter<QuranAdapter.ViewHolder>()
 {
 
-    lateinit var selectedSurah: SelectedSurah
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
