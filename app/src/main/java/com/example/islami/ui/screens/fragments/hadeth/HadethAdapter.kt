@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.islami.R
 import org.w3c.dom.Text
 
-class HadethAdapter(val hadethList : ArrayList<HadethDM> )
+class HadethAdapter(val hadethList : ArrayList<HadethDM> , var onClick : (HadethDM) -> Unit )
     : RecyclerView.Adapter<HadethAdapter.ViewHolder>()
 {
     override fun onCreateViewHolder(
@@ -26,6 +26,9 @@ class HadethAdapter(val hadethList : ArrayList<HadethDM> )
         val hadeth = hadethList[position]
         holder.hadethTitle.text = hadeth.title
         holder.hadethContent.text = hadeth.content
+        holder.itemView.setOnClickListener {
+            onClick(hadeth)
+        }
     }
 
     override fun getItemCount(): Int {

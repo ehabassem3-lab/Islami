@@ -1,5 +1,6 @@
 package com.example.islami.ui.screens.fragments.hadeth
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -28,9 +29,13 @@ class HadethFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         fillHadeth()
-       Log.e("ListSize",hadethDM.get(20).toString())
       var recyclerView  = activity!!.findViewById<RecyclerView>(R.id.HadethRecyclerView)
-       var adapter = HadethAdapter(hadethDM)
+       var adapter = HadethAdapter(hadethDM,{hadethDM ->
+           val intent = Intent(requireContext(), HadethDetails::class.java )
+           intent.putExtra("Hadeth",hadethDM)
+           startActivity(intent)
+
+       })
         recyclerView.adapter = adapter
 
     }
