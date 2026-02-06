@@ -55,4 +55,14 @@
     <style name="Theme.MyApp" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorSurface">@color/black</item>
     </style>
+    <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+         <item name="android:color">@color/black</item>
+
+    </style>
+    <style name="SplashScreeen" parent="Theme.SplashScreen">
+
+        <item name="windowSplashScreenAnimatedIcon">@drawable/objects</item>
+        <item name="windowSplashScreenAnimationDuration">3000</item>
+
+    </style>
 </resources>

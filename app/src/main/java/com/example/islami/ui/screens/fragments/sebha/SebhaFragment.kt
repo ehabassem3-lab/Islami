@@ -38,10 +38,10 @@ class SebhaFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        sebhaZekr = activity!!.findViewById(R.id.Sebha_Zekr_type)
-        sebhaNumber = activity!!.findViewById(R.id.Sebha_Zekr_Number)
-        sebhaImage = activity!!.findViewById(R.id.Sebha)
-        sebhaLayout = activity!!.findViewById(R.id.Sebha_Layout)
+        sebhaZekr = requireActivity().findViewById(R.id.Sebha_Zekr_type)
+        sebhaNumber = requireActivity().findViewById(R.id.Sebha_Zekr_Number)
+        sebhaImage = requireActivity().findViewById(R.id.Sebha)
+        sebhaLayout =requireActivity().findViewById(R.id.Sebha_Layout)
         sebhaZekr.text = type[0]
         sebhaNumber.text = counter.toString()
         super.onViewCreated(view, savedInstanceState)
@@ -78,8 +78,6 @@ class SebhaFragment : Fragment() {
                     counter = 0
                     sebhaZekr.text = type[0]
                     sebhaNumber.text = counter.toString()
-
-
                     return@setOnClickListener
                 }
 
@@ -87,9 +85,7 @@ class SebhaFragment : Fragment() {
 
             }
 
-
         }
-
 
     }
 }

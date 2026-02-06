@@ -4,4 +4,11 @@
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
+    <style name="SplashScreeen" parent="Theme.SplashScreen">
+
+        <item name="windowSplashScreenAnimatedIcon">@drawable/objects</item>
+        <item name="windowSplashScreenAnimationDuration">3000</item>
+        <item name="windowSplashScreenBackground">@color/black</item>
+
+    </style>
 </resources>

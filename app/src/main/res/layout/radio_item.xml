@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="20dp"
+    app:cardCornerRadius="30dp"
+    app:cardBackgroundColor="@color/gold">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/footer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+
+            />
+
+
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/Shieckh_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Radio Ibrahim Al-Akdar"
+            style="@style/headerLarge"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/Play_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/play"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Shieckh_Name"
+            />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/Volume_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/volume_on"
+            app:layout_constraintStart_toEndOf="@+id/Play_Button"
+            app:layout_constraintTop_toBottomOf="@+id/Shieckh_Name"
+            app:layout_constraintBottom_toBottomOf="@+id/Play_Button"
+            android:layout_marginLeft="20dp"
+
+            />
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>

@@ -20,6 +20,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/islami_tabs"
         android:background="@color/gold"
+        app:itemActiveIndicatorStyle="@style/Widget.App.BottomNavigationView"
         app:itemIconTint="@color/bottom_bar_color_selector"
         app:itemTextColor="@color/bottom_bar_color_selector"
         />
