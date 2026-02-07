@@ -38,12 +38,7 @@ class SebhaFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        sebhaZekr = requireActivity().findViewById(R.id.Sebha_Zekr_type)
-        sebhaNumber = requireActivity().findViewById(R.id.Sebha_Zekr_Number)
-        sebhaImage = requireActivity().findViewById(R.id.Sebha)
-        sebhaLayout =requireActivity().findViewById(R.id.Sebha_Layout)
-        sebhaZekr.text = type[0]
-        sebhaNumber.text = counter.toString()
+
         super.onViewCreated(view, savedInstanceState)
         sebhaOnClick()
 
@@ -51,6 +46,12 @@ class SebhaFragment : Fragment() {
     }
 
     fun sebhaOnClick() {
+          sebhaZekr = requireActivity().findViewById(R.id.Sebha_Zekr_type)
+        sebhaNumber = requireActivity().findViewById(R.id.Sebha_Zekr_Number)
+        sebhaImage = requireActivity().findViewById(R.id.Sebha)
+        sebhaLayout =requireActivity().findViewById(R.id.Sebha_Layout)
+        sebhaZekr.text = type[0]
+        sebhaNumber.text = counter.toString()
 
         sebhaLayout.setOnClickListener {
             sebhaImage.setOnClickListener { view ->
@@ -61,20 +62,20 @@ class SebhaFragment : Fragment() {
                 counter++
                 sebhaNumber.text = counter.toString()
                 Log.e("counter", counter.toString())
-                if (counter <= 30 ){
+                if (counter <= 33 ){
                     sebhaZekr.text = type[0]
                     sebhaNumber.text = counter.toString()
                 }
-               else  if (counter <= 60 ){
+               else  if (counter <= 66 ){
                     sebhaZekr.text = type[1]
                     sebhaNumber.text = counter.toString()
                 }
-                else  if (counter <= 90 ){
+                else  if (counter <= 99 ){
                     sebhaZekr.text = type[2]
                     sebhaNumber.text = counter.toString()
                 }
 
-                if (counter == 90 ){
+                if (counter == 100 ){
                     counter = 0
                     sebhaZekr.text = type[0]
                     sebhaNumber.text = counter.toString()

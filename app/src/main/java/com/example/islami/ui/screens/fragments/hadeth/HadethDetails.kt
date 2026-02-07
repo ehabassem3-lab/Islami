@@ -5,7 +5,6 @@ import android.os.Build
 import android.os.Bundle
 import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.R
 import com.example.islami.databinding.HadethDetailsBinding
 import com.example.islami.ui.screens.MainActivity
 
